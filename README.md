@@ -40,9 +40,11 @@ NEXT_PUBLIC_BASE_PATH=/biovikas npm run build
 
 ### GitHub Pages (this repo)
 
-`.github/workflows/deploy-pages.yml` builds the site with that base path and publishes `out/` on every push to `main` or `claude/great-pasteur-b5kdhu`.
+`.github/workflows/deploy-pages.yml` builds the site and publishes `out/` on every push to `main` or `claude/great-pasteur-b5kdhu`. **Settings → Pages → Build and deployment → Source** must be **GitHub Actions** (not "Deploy from a branch") for this to take effect.
 
-One-time setup: in **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions** (it currently defaults to "Deploy from a branch", which is why the live URL shows this README instead of the site). Once that's switched, push to re-run the workflow — or trigger it manually from the **Actions** tab.
+The site is served from the custom domain **bio.vikasgupta.world** at the root, so the build does **not** set `NEXT_PUBLIC_BASE_PATH` — the workflow builds with no base path. `public/CNAME` (containing `bio.vikasgupta.world`) is committed so the custom domain survives every Actions deploy, since GitHub Pages can otherwise drop it after a deploy that doesn't include it.
+
+If this site is ever moved to an unmapped project URL like `https://<user>.github.io/biovikas/` instead of a custom domain, set `NEXT_PUBLIC_BASE_PATH: /biovikas` in the workflow's build step again (see the "Deploying" section above) and delete `public/CNAME`.
 
 ## Responsive behaviour
 

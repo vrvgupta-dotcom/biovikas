@@ -29,12 +29,11 @@ jobs:
 
       - run: npm ci
 
-      # This repo is served from https://vrvgupta-dotcom.github.io/biovikas/
-      # (a project page, not a user/org root page), so every internal link
-      # and asset path needs the /biovikas prefix baked in at build time.
+      # Served from the custom domain bio.vikasgupta.world at the root,
+      # so no base path — leave NEXT_PUBLIC_BASE_PATH unset. (Only set it
+      # if this ever moves back to an unmapped project URL like
+      # https://<user>.github.io/biovikas/.)
       - run: npm run build
-        env:
-          NEXT_PUBLIC_BASE_PATH: /biovikas
 
       # Static export omits this, but GitHub Pages' default Jekyll
       # processing otherwise drops the underscore-prefixed _next/ assets.
