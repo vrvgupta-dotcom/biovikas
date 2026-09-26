@@ -1,0 +1,93 @@
+.about {
+  background: var(--white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.body {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 16px;
+}
+
+.body:last-of-type {
+  margin-bottom: 28px;
+}
+
+.credentials {
+  display: flex;
+  gap: 16px;
+}
+
+.credential {
+  flex: 1;
+  background: var(--card-bg);
+  border-top: 3px solid var(--accent);
+  padding: 14px 20px;
+}
+
+.warm {
+  background: var(--warm-bg);
+}
+
+.credTitle {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.credDetail {
+  color: var(--accent);
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.competencies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.competency {
+  background: var(--card-bg);
+  border-left: 3px solid var(--accent);
+  padding: 18px;
+}
+
+.compTitle {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.compBody {
+  color: var(--text-muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .credentials {
+    flex-direction: column;
+  }
+
+  .competencies {
+    grid-template-columns: 1fr;
+  }
+}

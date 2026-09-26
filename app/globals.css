@@ -1,0 +1,94 @@
+:root {
+  /* Colour tokens (see design handoff) */
+  --navy: #0d2b4e;
+  --teal: #0f7173;
+  --teal-dark: #085658;
+  --gold: #c9882a;
+  --gold-light: #e8a945;
+  --navy-card: #142f4a;
+  --navy-footer: #081e35;
+  --navy-line: #24405e;
+  --text: #22303c;
+  --text-secondary: #3d4f5c;
+  --text-muted: #5a6e7c;
+  --text-light: #8fa8ba;
+  --text-lighter: #b8cdd8;
+  --text-lightest: #edf2f6;
+  --footer-text: #4a6275;
+  --card-bg: #f2f5f8;
+  --page-bg: #f4f7fa;
+  --warm-bg: #fff8ed;
+  --white: #ffffff;
+
+  --font-serif: "Source Serif 4", serif;
+  --font-sans: "Public Sans", sans-serif;
+
+  --section-pad: 80px 5vw;
+  --max-width: 1100px;
+  --nav-height: 56px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  font-family: var(--font-sans);
+  color: var(--text);
+}
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* ── Shared section scaffolding ── */
+.section {
+  padding: var(--section-pad);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.overline {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.15;
+  margin: 0 0 48px;
+}

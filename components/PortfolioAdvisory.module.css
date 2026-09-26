@@ -1,0 +1,79 @@
+.section {
+  background: var(--white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.goldOverline {
+  color: var(--gold);
+}
+
+.title {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 28px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sector,
+.engagement {
+  background: var(--card-bg);
+  border-left: 4px solid var(--accent);
+}
+
+.sector {
+  padding: 20px;
+}
+
+.engagement {
+  padding: 18px 20px;
+}
+
+.warm {
+  background: var(--warm-bg);
+}
+
+.sectorTitle,
+.engagementTitle {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+.sectorTitle {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.engagementTitle {
+  font-size: 13.5px;
+  margin-bottom: 4px;
+}
+
+.sectorBody {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.engagementBody {
+  color: var(--text-muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

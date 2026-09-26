@@ -1,0 +1,46 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(13 43 78 / 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--gold);
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+
+.links {
+  display: flex;
+  gap: 28px;
+}
+
+.link {
+  color: var(--text-lighter);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .links {
+    display: none;
+  }
+}

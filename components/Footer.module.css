@@ -1,0 +1,19 @@
+.footer {
+  background: var(--navy-footer);
+  padding: 20px 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  color: var(--footer-text);
+}
+
+.copyright {
+  font-family: var(--font-serif);
+  font-size: 13px;
+}
+
+.tagline {
+  font-size: 12px;
+}
