@@ -38,6 +38,12 @@ For a GitHub Pages *project* site (served under `/biovikas`), build with the bas
 NEXT_PUBLIC_BASE_PATH=/biovikas npm run build
 ```
 
+### GitHub Pages (this repo)
+
+`.github/workflows/deploy-pages.yml` builds the site with that base path and publishes `out/` on every push to `main` or `claude/great-pasteur-b5kdhu`.
+
+One-time setup: in **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions** (it currently defaults to "Deploy from a branch", which is why the live URL shows this README instead of the site). Once that's switched, push to re-run the workflow — or trigger it manually from the **Actions** tab.
+
 ## Responsive behaviour
 
 | Width | Layout |
